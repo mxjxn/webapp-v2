@@ -1,9 +1,14 @@
 {
-    "trailingComma": "es5",
-    "semi": false,
-    "singleQuote": true,
-    "printWidth": 150,
-    "bracketSameLine": true,
-    "useTabs": false,
-    "tabWidth": 2
+  "parser": "babel-ts",
+  "trailingComma": "es5",
+  "semi": false,
+  "singleQuote": true,
+  "printWidth": 150,
+  "endOfLine": "lf",
+  "bracketSpacing": true,
+  "bracketSameLine": false,
+  "proseWrap": "preserve",
+  "htmlWhitespaceSensitivity": "ignore",
+  "useTabs": false,
+  "tabWidth": 2
 }
