@@ -10,18 +10,13 @@ export function NetworkStatus() {
   const network = useNetwork()
   const explorerUrl = network.chain?.blockExplorers?.default.url
   const bgColor = useColorModeValue(`${THEME_COLOR_SCHEME}.50`, `${THEME_COLOR_SCHEME}.800`)
+  const textColor = useColorModeValue(`${THEME_COLOR_SCHEME}.900`, `${THEME_COLOR_SCHEME}.50`)
 
   return (
     <Flex alignItems="center" gap={2} zIndex={2} bgColor={bgColor} p={1}>
       <Badge colorScheme={GetNetworkColor(network.chain?.network)} fontSize="2xs">
         {network.chain?.name ?? 'Ethereum'}
       </Badge>
-      {explorerUrl && (
-        <LinkComponent href={explorerUrl}>
-          <Text fontSize="2xs"># {block.data}</Text>
-        </LinkComponent>
-      )}
-      {!explorerUrl && <Text fontSize="2xs"># {block.data}</Text>}
     </Flex>
   )
 }

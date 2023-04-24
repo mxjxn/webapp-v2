@@ -1,0 +1,78 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+  relationMode = "prisma"
+}
+
+model User {
+  wallet    String   @id @unique @default(cuid())
+  email     String?  @unique
+  nfts      NFT[]
+}
+ 
+model NFT {
+  contractAddress String
+  tokenId         String
+  collection      Collection @relation(fields: [contractAddress], references: [contractAddress])
+  owner           User? @relation(fields: [ownerId], references: [wallet])
+  ownerId         String?
+  image           String?
+  animationURI    String?
+  attributes      Json?
+  @@id ([contractAddress, tokenId])
+}
+
+model Admin {
+  id              Int      @id @default(autoincrement())
+  contractAddress String   @unique
+}
+
+model Collection {
+  contractAddress String @id @unique
+  name            String
+  coverImage      String?
+  nfts            NFT[]
+}
+
+model BlogPost {
+  id          Int      @id @default(autoincrement())
+  title       String
+  slug        String   @unique
+  postType    PostType
+  content     String
+  videoUrl    String?
+  audioUrl    String?
+  description String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  tags        BlogPostTag[] // Update the relation
+}
+
+enum PostType {
+  SMALL_FORM
+  LONG_FORM
+  Q_AND_A
+  VIDEO
+  AUDIO
+  MARKDOWN
+}
+
+model Tag {
+  id        Int       @id @default(autoincrement())
+  name      String    @unique
+  slug      String    @unique
+  blogPosts BlogPostTag[] // Update the relation
+}
+
+// Create a pivot table to represent the many-to-many relationship
+model BlogPostTag {
+  blogPostId Int
+  tagId      Int
+  blogPost   BlogPost @relation(fields: [blogPostId], references: [id])
+  tag        Tag      @relation(fields: [tagId], references: [id])
+  @@id([blogPostId, tagId])
+}
