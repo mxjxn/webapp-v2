@@ -6,7 +6,7 @@ export const SITE_NAME = 'MXJXN'
 export const SITE_DESCRIPTION = 'MXJXN.xyz'
 export const SITE_URL = 'https://mxjxnxyz.vercel.app'
 
-export const THEME_INITIAL_COLOR_MODE: 'system'
+export const THEME_INITIAL_COLOR_MODE = 'system'
 export const THEME_COLOR_SCHEME: ThemingProps['colorScheme'] = 'telegram'
 export const THEME_CONFIG = {
   initialColorMode: styles.config.initialColorMode,
