@@ -2,8 +2,8 @@ import { ThemingProps } from '@chakra-ui/react'
 import { mainnet, sepolia, polygon, optimism, arbitrum } from '@wagmi/core/chains'
 import styles from '../styles'
 
-export const SITE_NAME = 'MXJXN'
-export const SITE_DESCRIPTION = 'MXJXN.xyz'
+export const SITE_NAME = 'MXJXN.xyz'
+export const SITE_DESCRIPTION = 'Max Jackson, web3 developer and artist'
 export const SITE_URL = 'https://mxjxnxyz.vercel.app'
 
 export const THEME_INITIAL_COLOR_MODE = 'system'

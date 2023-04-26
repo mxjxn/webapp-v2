@@ -14,9 +14,14 @@ interface Props {
 export function Header(props: Props) {
   const className = props.className ?? ''
 
+  // affix this header to the top even when scrolling
+
   return (
     <Flex
       as="header"
+      position="sticky"
+      top={0}
+      zIndex={1}
       className={className}
       bg={useColorModeValue(`${THEME_COLOR_SCHEME}.100`, `${THEME_COLOR_SCHEME}.900`)}
       px={4}
@@ -33,7 +38,7 @@ export function Header(props: Props) {
 
       <Flex alignItems="center" gap={4}>
         <NetworkStatus />
-        <ConnectKitButton theme="web95" />
+        <ConnectKitButton theme="retro" />
         <ThemeSwitcher />
       </Flex>
     </Flex>

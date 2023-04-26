@@ -1,14 +1,20 @@
 // import next image
+import RegisterModal from 'components/modal/RegisterModal'
 import Button from 'components/Button'
+import Card from 'components/Card'
 // import chakra button
+
+// make a component that opens RegisterM
+
 export default async function Page() {
   const items = [
-    { title: 'Item 1', description: 'Item 1 description', image: 'https://via.placeholder.com/100' },
-    { title: 'Item 2', description: 'Item 2 description', image: 'https://via.placeholder.com/100' },
-    { title: 'Item 3', description: 'Item 3 description', image: 'https://via.placeholder.com/100' },
+    { title: 'Item 1', description: 'Item 1 description' },
+    { title: 'Item 2', description: 'Item 2 description' },
+    { title: 'Item 3', description: 'Item 3 description' },
   ]
   return (
     <div>
+      <RegisterModal isOpen={true} />
       <h1>Dashboard</h1>
       <p>Dashboard page content</p>
       {items.map((item, index) => (

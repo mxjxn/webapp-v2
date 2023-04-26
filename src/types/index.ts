@@ -3,3 +3,5 @@ export interface State<T> {
   data?: T
   error?: string
 }
+
+export type WalletAddress = string
