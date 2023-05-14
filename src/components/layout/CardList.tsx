@@ -1,5 +1,13 @@
 import React from 'react'
-import { Image, Text, Box, Card, CardBody, Flex, useColorModeValue } from '@chakra-ui/react'
+import {
+  Image,
+  Text,
+  Box,
+  Card,
+  CardBody,
+  Flex,
+  useColorModeValue,
+} from '@chakra-ui/react'
 import { LinkComponent } from './LinkComponent'
 import { HeadingComponent } from './HeadingComponent'
 
@@ -22,7 +30,9 @@ export function CardList(props: Props) {
 
   return (
     <Box as="section" className={className}>
-      {props.title && <HeadingComponent as="h3">{props.title}</HeadingComponent>}
+      {props.title && (
+        <HeadingComponent as="h3">{props.title}</HeadingComponent>
+      )}
 
       <Flex direction="column" gap={4}>
         {props.items.map((i, index) => {
@@ -31,7 +41,13 @@ export function CardList(props: Props) {
               <CardBody>
                 <Flex gap={4} direction={{ base: 'column', sm: 'row' }}>
                   <Flex px={{ base: 0, sm: 4 }}>
-                    <Image objectFit="contain" maxW="60px" src={i.image} alt={i.title} filter={`invert(${invert})`} />
+                    <Image
+                      objectFit="contain"
+                      maxW="60px"
+                      src={i.image}
+                      alt={i.title}
+                      filter={`invert(${invert})`}
+                    />
                   </Flex>
 
                   <Flex direction="column">
@@ -40,7 +56,9 @@ export function CardList(props: Props) {
                         <HeadingComponent as="h4">{i.title}</HeadingComponent>
                       </LinkComponent>
                     )}
-                    {!i.url && <HeadingComponent as="h4">{i.title}</HeadingComponent>}
+                    {!i.url && (
+                      <HeadingComponent as="h4">{i.title}</HeadingComponent>
+                    )}
 
                     <Text mt={4}>{i.description}</Text>
                   </Flex>

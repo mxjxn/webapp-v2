@@ -6,19 +6,8 @@
   "plugins": [
     "prettier"
   ],
-  "rules": {
-    "prettier/prettier": ["error"],
-    "react/jsx-wrap-multilines": [
-    "error",
-      {
-        "declaration": "parens-new-line",
-        "assignment": "parens-new-line",
-        "return": "parens-new-line",
-        "arrow": "parens-new-line",
-        "condition": "parens-new-line",
-        "logical": "parens-new-line",
-        "prop": "parens-new-line"
-      }
-    ],
-  }
+	"rules": {
+    "react/no-unescaped-entities": "off",
+    "@next/next/no-page-custom-font": "off"
+	}
 }

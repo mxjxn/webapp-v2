@@ -16,7 +16,8 @@ model User {
  
 model NFT {
   contractAddress String
-  tokenId         String
+	tokenURI				String
+  tokenId         Int @unique
   collection      Collection @relation(fields: [contractAddress], references: [contractAddress])
   owner           User? @relation(fields: [ownerId], references: [wallet])
   ownerId         String?

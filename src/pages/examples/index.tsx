@@ -14,13 +14,15 @@ import NFTIcon from 'assets/icons/nft.png'
 export const ExampleItems = [
   {
     title: 'Sign & verify messages',
-    description: 'Keys can be used to sign any kind of messages. This is useful to verify a message was sent by a specific account.',
+    description:
+      'Keys can be used to sign any kind of messages. This is useful to verify a message was sent by a specific account.',
     image: SignIcon.src,
     url: '/examples/sign',
   },
   {
     title: 'Sign-in with Ethereum',
-    description: 'Sign-in with Ethereum is a new form of authentication that enables users to control their identity with their Ethereum account.',
+    description:
+      'Sign-in with Ethereum is a new form of authentication that enables users to control their identity with their Ethereum account.',
     image: AuthIcon.src,
     url: '/examples/siwe',
   },
@@ -33,25 +35,29 @@ export const ExampleItems = [
   },
   {
     title: 'Custom Contract',
-    description: 'This example shows a custom Solidity smart contract deployed using Hardhat. You can find sample contract under /contracts.',
+    description:
+      'This example shows a custom Solidity smart contract deployed using Hardhat. You can find sample contract under /contracts.',
     image: CustomIcon.src,
     url: '/examples/custom-message',
   },
   {
     title: 'Send Ether',
-    description: 'Sending Ether to another address is the most basic, common transaction that you can do.',
+    description:
+      'Sending Ether to another address is the most basic, common transaction that you can do.',
     image: EtherIcon.src,
     url: '/examples/send-ether',
   },
   {
     title: 'Send ERC20 Token',
-    description: 'ERC20 introduces a standard interface for fungible tokens. Use this example to send any ERC20 to another address.',
+    description:
+      'ERC20 introduces a standard interface for fungible tokens. Use this example to send any ERC20 to another address.',
     image: TokenIcon.src,
     url: '/examples/send-erc20',
   },
   {
     title: 'Mint NFT',
-    description: 'A Non-Fungible Token (NFT) is used to identify something or someone in a unique way. Use this ERC721 example to mint your own NFT.',
+    description:
+      'A Non-Fungible Token (NFT) is used to identify something or someone in a unique way. Use this ERC721 example to mint your own NFT.',
     image: NFTIcon.src,
     url: '/examples/mint-nft',
   },
@@ -65,8 +71,9 @@ export default function Examples() {
       <main>
         <HeadingComponent as="h2">Nexth Examples</HeadingComponent>
         <Text pb={4}>
-          All these examples can be found in the main repo at <Code>src/pages/examples</Code> to help you bootstrap development. You can delete the
-          entire folder before deploying your own App.{' '}
+          All these examples can be found in the main repo at{' '}
+          <Code>src/pages/examples</Code> to help you bootstrap development. You
+          can delete the entire folder before deploying your own App.{' '}
         </Text>
 
         <CardList title="Examples" items={ExampleItems} />

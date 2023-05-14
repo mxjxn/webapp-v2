@@ -1,5 +1,5 @@
-'use client';
-import React, { useState } from 'react';
+'use client'
+import React, { useState } from 'react'
 import {
   Box,
   Button,
@@ -14,19 +14,22 @@ import {
   ModalHeader,
   ModalOverlay,
   useDisclosure,
-} from '@chakra-ui/react';
+} from '@chakra-ui/react'
 
-import { useFormik } from 'formik';
+import { useFormik } from 'formik'
 import { type WalletAddress } from 'types'
 
 interface RegisterFormData {
-  wallet: WalletAddress;
-  email: string;
+  wallet: WalletAddress
+  email: string
 }
 
 const RegisterModal: React.FC = () => {
-  const { isOpen, onOpen, onClose } = useDisclosure();
-  const [formData, setFormData] = useState<RegisterFormData>({ email: '' });
+  const { isOpen, onOpen, onClose } = useDisclosure()
+  const [formData, setFormData] = useState<RegisterFormData>({
+    email: '',
+    wallet: '',
+  })
 
   const formik = useFormik({
     initialValues: {
@@ -86,7 +89,7 @@ const RegisterModal: React.FC = () => {
         </ModalContent>
       </Modal>
     </>
-  );
-};
+  )
+}
 
-export default RegisterModal;
+export default RegisterModal

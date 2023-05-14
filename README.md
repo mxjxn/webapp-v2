@@ -2,7 +2,7 @@
 
 > A web-3-ready webapp for my portfolio site.
 
-## built from [NEXTH](https://github.com/wslyvh/nexth)
+## built atop [NEXTH](https://github.com/wslyvh/nexth)
 
 - [Next.js](https://nextjs.org/docs)
 - [Chakra UI](https://chakra-ui.com/)

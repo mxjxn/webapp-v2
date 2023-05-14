@@ -110,8 +110,9 @@ export default function SiweExample() {
         <NextSeo title="Sign-in With Ethereum" />
         <HeadingComponent as="h2">Sign-in with Ethereum</HeadingComponent>
         <p>
-          Sign-in with Ethereum is a new form of authentication that enables users to control their digital identity with their Ethereum account and
-          ENS profile instead of relying on a traditional intermediary.
+          Sign-in with Ethereum is a new form of authentication that enables
+          users to control their digital identity with their Ethereum account
+          and ENS profile instead of relying on a traditional intermediary.
         </p>
 
         <UnorderedList>
@@ -119,7 +120,9 @@ export default function SiweExample() {
             <LinkComponent href="https://login.xyz/">More info</LinkComponent>
           </ListItem>
           <ListItem>
-            <LinkComponent href="https://wagmi.sh/examples/sign-in-with-ethereum">Wagmi Docs</LinkComponent>
+            <LinkComponent href="https://wagmi.sh/examples/sign-in-with-ethereum">
+              Wagmi Docs
+            </LinkComponent>
           </ListItem>
         </UnorderedList>
 

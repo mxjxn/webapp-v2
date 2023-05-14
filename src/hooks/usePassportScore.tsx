@@ -18,19 +18,24 @@ export function usePassportScore(round?: boolean) {
 
   useEffect(() => {
     const getPassport = async () => {
-      const response = await fetch(`https://api.scorer.gitcoin.co/registry/score/${COMMUNITY_ID}/${address}`, {
-        headers: {
-          'Content-Type': 'application/json',
-          'X-API-Key': API_KEY ?? '',
-        },
-      })
+      const response = await fetch(
+        `https://api.scorer.gitcoin.co/registry/score/${COMMUNITY_ID}/${address}`,
+        {
+          headers: {
+            'Content-Type': 'application/json',
+            'X-API-Key': API_KEY ?? '',
+          },
+        }
+      )
 
       const data = await response.json()
       if (response.status === 200) {
         setState({
           loading: false,
           error: undefined,
-          data: round ? Math.round(Number(data.score)) : Math.round(Number(data.score) * 100) / 100,
+          data: round
+            ? Math.round(Number(data.score))
+            : Math.round(Number(data.score) * 100) / 100,
         })
         return
       }

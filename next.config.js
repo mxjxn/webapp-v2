@@ -14,7 +14,15 @@ const nextConfig = {
   // Optionally, add any other Next.js config below
   reactStrictMode: true,
   experimental: {
-    appDir: true,
+/*     appDir: true, */
+  },
+	images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'res.cloudinary.com',
+      },
+    ],
   },
 }
 
