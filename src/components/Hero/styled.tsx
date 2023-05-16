@@ -4,8 +4,8 @@ import { Grid, GridItem, TextProps } from '@chakra-ui/react'
 const MainGrid: React.FC<TextProps> = ({ children }) => (
   <Grid
     gridTemplateColumns={`repeat(8, 10fr)`}
-    gridTemplateRows={`repeat(19, 1fr)`}
-    maxHeight="100vh"
+    gridTemplateRows={`repeat(4, 1fr)`}
+    maxHeight="20vh"
     gap={'1em'}
   >
     {children}

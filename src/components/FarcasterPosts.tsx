@@ -70,48 +70,63 @@ function FarcasterCard({ text, image, hash, timestamp, onImageClick }: any) {
       borderBottom={`1px solid ${
         colorMode === 'dark' ? '#ffffff33' : '#00000033'
       }`}
+			minW={'350px'}
       variant="elevated"
       display="block"
       bg={`${bg}.100`}
     >
       <CardBody py={1} pb={0} px={0} mx={0}>
-        <VStack spacing={0}>
-          <Box
-            bg={`${bg}.50`}
-            width="xs"
-            roundedTop={6}
-            px={4}
-            py={0}
-            mx={1}
-            mt={0}
-          >
-            <Box ml={'-0.75em'} mt={'0.25em'} mb={'-0.25em'} w="100%">
+
+        <VStack alignItems={'stretch'} spacing={0}>
+				
+          <Box bg={`${bg}.200`} roundedTop={6} px={4} py={0} mx={1} mt={0}>
+            {image && (
+              <Center py={3} px={5} mx={1}>
+                <MotionBox
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <Image
+                    alt={text}
+                    src={image}
+                    onClick={onImageClick}
+                    cursor="pointer"
+                    height={200}
+                    width={'auto'}
+                  />
+                </MotionBox>
+              </Center>
+            )}
+          </Box>
+          <Box roundedTop={6} px={4} py={0} mx={1} mt={0}>
+            <Box
+							mx={'1.5em'} 
+							px={'1.5em'}
+							position={'absolute'}
+							ml={'-.7em'}
+							mt={'.2em'}
+						>
               <RiDoubleQuotesL />
             </Box>
-            <Box p={'0.5em'} fontSize="xs" display="block">
+            <Box
+							mx={'1.5em'} 
+							px={'1.5em'}
+							pb={0}
+							fontSize="xs"
+							display="block"
+						>
               {linebreakToParagraphs(text)}
             </Box>
-            <Box mt={'-0.5em'} mb={'0.5em'} mr={'-0.75em'} textAlign={'right'}>
+            <Box
+							mt={'-1em'}
+							mr={'0em'}
+							mx={'1.5em'} 
+							position={'absolute'}
+							right="0px"
+						>
               <RiDoubleQuotesR />
             </Box>
           </Box>
-          {image && (
-            <Center width="xs" bg={`blackAlpha.400`} py={3} px={5} mx={1}>
-              <MotionBox
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <Image
-                  alt={text}
-                  src={image}
-                  onClick={onImageClick}
-                  cursor="pointer"
-                  height={200}
-                  width={'auto'}
-                />
-              </MotionBox>
-            </Center>
-          )}
         </VStack>
       </CardBody>
 
@@ -133,6 +148,7 @@ function FarcasterCard({ text, image, hash, timestamp, onImageClick }: any) {
           pb={0}
           roundedTop={4}
           m={0}
+          pr={5}
           fontSize="xs"
           display="flex"
           alignItems="baseline"
@@ -145,8 +161,9 @@ function FarcasterCard({ text, image, hash, timestamp, onImageClick }: any) {
           <Box display="block" as="u">
             <a href="https://warpcast.com/mxjxn">mxjxn</a>
           </Box>
-          <Box display="block" p={[0, 1]}>
-            on WarpCast
+          <Box display="block" py={0} px={2}>
+            {' '}
+            on WarpCast{' '}
           </Box>
           <Box display="block" as="u">
             <a href={`https://warpcast.com/mxjxn/${hash}`}>
@@ -172,22 +189,44 @@ function FarcasterPosts({ posts }: FarcasterPostsProps) {
   const { onOpen, isOpen, onClose } = useDisclosure()
   const { colorMode } = useColorMode()
 
+	const farcasterIconSrc = `/images/fc-arch-${colorMode == 'dark' ? 'dark' : 'light'}.png`
+
   return (
     <>
-      <VStack display="flex" flexDirection="column" spacing={4}>
+      <VStack
+        display="flex"
+        alignItems={'stretch'}
+        flexDirection="column"
+        spacing={4}
+      >
         <Box
-          as="h2"
           bg={colorMode === 'dark' ? `${colors[0]}.200` : `${colors[1]}.200`}
-          width="xs"
-          textAlign="center"
           rounded={12}
-          p={2}
           borderBottom={`1px solid ${
             colorMode === 'dark' ? '#ffffff33' : '#00000033'
           }`}
+					pt={'.5em'}
+					pb={'.2em'}
         >
-          Recent casts
+					<Image
+						alt={'Farcaster logo'}
+						pos={'absolute'}
+						mt={'-.75em'}
+						ml={'-.3em'}
+						height={'2.75em'}
+						width={'auto'}
+						src={farcasterIconSrc}
+					/>
+          <Text
+						as="h2"
+						display="inline"
+						pl={'3em'}
+						letterSpacing={'0.2em'}
+					>
+						Recent casts
+					</Text>
         </Box>
+
         {posts &&
           posts.map((post: any) => (
             <FarcasterCard

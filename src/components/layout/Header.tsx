@@ -33,14 +33,6 @@ export function Header(props: Props) {
       top={0}
       zIndex={1}
       className={className}
-      bg={useColorModeValue(
-        `${THEME_COLOR_SCHEME}.100`,
-        `${THEME_COLOR_SCHEME}.900`
-      )}
-      bgGradient={useColorModeValue(
-        'linear(to-r, orange.200, pink.500)',
-        'linear(to-r, pink.800, red.900)'
-      )}
       px={{
         base: '2vw',
       }}
@@ -70,10 +62,10 @@ export function Header(props: Props) {
               position={'relative'}
               pr={3}
             >
-              <WavyBoi as={'span'} display={'inline-block'} hue={1} span={40}>
+              <WavyBoi as={'span'} display={'inline-block'} hue={181} span={50}>
                 MXJXN
               </WavyBoi>
-              <WavyBoi fontSize={'0.75em'} as={'span'} hue={10} span={-30}>
+              <WavyBoi fontSize={'0.75em'} as={'span'} hue={110} span={80}>
                 XYZ
               </WavyBoi>
             </Box>

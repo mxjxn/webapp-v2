@@ -18,10 +18,10 @@ interface WavyProps extends Omit<TextProps, 'color'> {
 
 const Wavy = styled.div<WavyProps>`
   background: linear-gradient(
-      90deg,
-      hsl(${(props) => props.hue ?? 150}, 80%, 55%),
-      hsl(${(props) => (props.span ?? 150) + (props.hue ?? 150)}, 90%, 55%),
-      hsl(${(props) => props.hue ?? 150}, 80%, 55%)
+      40deg,
+      hsl(${(props) => props.hue ?? 150}, 90%, 55%),
+      hsl(${(props) => (props.span ?? 150) + (props.hue ?? 150)}, 30%, 55%),
+      hsl(${(props) => props.hue ?? 150}, 90%, 55%)
     )
     0 0 / 400% 100%;
   -webkit-background-clip: text;
@@ -30,7 +30,7 @@ const Wavy = styled.div<WavyProps>`
   display: inline-block;
   background-repeat: repeat;
   background-clip: text;
-  animation: ${kf} 16s infinite linear;
+  animation: ${kf} 8s infinite linear;
   padding: ${(props) => props.padding || '0.1em'};
 `
 

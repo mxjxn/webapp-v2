@@ -98,4 +98,15 @@ const T: React.FC<TextProps> = ({
   </Text>
 )
 
-export { T, TAnim, BAnim, U }
+const Title: React.FC<TextProps> = ({ children, ...props }) => (
+	<Text
+		fontSize={'2em'}
+		pl={'.1em'}
+		pb={'.2em'}
+		{...props}
+	>
+	{children}
+	</Text>
+)
+
+export { Title, T, TAnim, BAnim, U }
