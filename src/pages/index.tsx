@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import _ from 'lodash'
 import artworks, { NFTMetadata } from 'data/mxjxn-artworks'
+import { getNFTData } from './api/nftData';
 
 // imported components
 import { Box, Grid, GridItem } from '@chakra-ui/react'
@@ -76,13 +77,15 @@ export default function Home({ nfts, posts }: HomeProps) {
 
 export async function getStaticProps() {
   const cleanPosts = await getCleanFarcasterPosts()
-  const nfts = artworks
+  // const nfts = artworks
+  const nftData = await getNFTData();
 
+  console.log({nftData})
   return {
     props: {
-      nfts,
+      nfts: nftData,
       posts: cleanPosts,
     },
-    revalidate: 120,
+    revalidate: 3600,
   }
 }

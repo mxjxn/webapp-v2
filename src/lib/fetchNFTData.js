@@ -3,7 +3,7 @@ import axios from 'axios'
 import { setTimeout } from 'timers/promises'
 import fs from 'fs'
 
-const contractAddress = '0x2e40c7a7aada89b814c9a1708b4ff4d143aef60a' // Add your contract address here
+export const mxjxnArtworksAddress = '0x2e40c7a7aada89b814c9a1708b4ff4d143aef60a' // Add your contract address here
 const providerUrl =
   'https://indulgent-radial-hexagon.discover.quiknode.pro/7eb124e9e05923011a5931ab3509db03f30390a4/'
 const mxjxnArtworksABI = [
@@ -801,7 +801,7 @@ const outputMetadataFile = 'metadata.js'
   // Initialize ethers.js provider and contract
   const provider = new ethers.providers.JsonRpcProvider(providerUrl)
   const contract = new ethers.Contract(
-    contractAddress,
+    mxjxnArtworksAddress,
     mxjxnArtworksABI,
     provider
   )

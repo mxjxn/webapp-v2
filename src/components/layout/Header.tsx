@@ -17,6 +17,7 @@ import { ThemeSwitcher } from './ThemeSwitcher'
 import { ConnectKitButton } from 'connectkit'
 import { THEME_COLOR_SCHEME } from 'utils/config'
 import localFont from 'next/font/local'
+import ManifoldConnect from './ManifoldConnect'
 
 const font = localFont({ src: '../../pages/fonts/boon-700.otf' })
 
@@ -83,8 +84,7 @@ export function Header(props: Props) {
         <Spacer />
 
         <Flex alignItems="center" gap={4}>
-          <ConnectKitButton theme="web95" />
-          <LoginButton />
+					<ManifoldConnect />
           <ThemeSwitcher />
         </Flex>
       </Box>
