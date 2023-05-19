@@ -11,7 +11,7 @@ import {
   GridItem,
   Image,
 } from '@chakra-ui/react'
-import type { NFTMetadata } from 'data/mxjxn-artworks'
+import { NFTMetadata } from 'data/mxjxn-artworks'
 
 type NFTGalleryProps = {
   nfts: NFTMetadata[]
@@ -104,11 +104,13 @@ export default function NFTGallery(props: NFTGalleryProps) {
   )
 }
 
-const NFTGridItem = ({ nft }: React.PropsWithChildren<any>) => {
+const NFTGridItem = ({ nft }: { nft: NFTMetadata }) => {
   const nftSrc = localNftSrc(nft)
   return (
     <GridItem m={'.3em'} bg={'blue'}>
-      <Image src={nftSrc} />
+      <Image 
+			alt={nft.description}
+			src={nftSrc} />
     </GridItem>
   )
 }

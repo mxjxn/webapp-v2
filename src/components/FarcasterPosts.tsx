@@ -222,6 +222,7 @@ function FarcasterPosts({ posts }: FarcasterPostsProps) {
         >
           {selectedImage && (
             <Image
+							alt={''}
               src={selectedImage}
               height="90vh"
               width="90vw"

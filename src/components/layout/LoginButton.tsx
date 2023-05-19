@@ -29,7 +29,7 @@ export const LoginButton = () => {
     // 2. window is focused (in case user logs out of another window)
     window.addEventListener('focus', handler)
     return () => window.removeEventListener('focus', handler)
-  }, [])
+  }, [setLoggedInAddress])
 
   // signin function
   const signIn = async () => {
