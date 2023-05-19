@@ -2,6 +2,7 @@ import _, { mean } from 'lodash'
 const metadata = [
   {
     name: 'Simulated Calm',
+    listing_id: 245,
     created_by: 'MXJXN',
     description: 'Calligraphic meditation as a living, breathing form.',
     attributes: [
@@ -40,8 +41,10 @@ const metadata = [
     image_url:
       'https://arweave.net/_Iu3NbXH7fJ974w-lyPTzB7ZDeZ04P_A02L_O7_IG64',
   },
+
   {
     name: 'Ethereal Realm I',
+    listing_id: 1765,
     created_by: 'MXJXN',
     description:
       '"Ethereal Realms" is a collection of AI art that transports the viewer to a realm of tranquility and serenity. These gates are like a peaceful oasis in the midst of a chaotic world, offering a brief escape from the stresses of daily life. The use of Greek pillars and marble adds a touch of elegance and sophistication, while the abstract shapes create a sense of wonder and mystery.',
@@ -67,8 +70,10 @@ const metadata = [
     image_url:
       'https://arweave.net/CPKfP-lOd-hsrgNgTotVzHpkVcgxKNMTRnZR6y7mHu8',
   },
+
   {
     name: 'Ethereal Realm II',
+    listing_id: 1767,
     created_by: 'MXJXN',
     description:
       '"Ethereal Realms" is a collection of AI art that transports the viewer to a realm of tranquility and serenity. These gates are like a peaceful oasis in the midst of a chaotic world, offering a brief escape from the stresses of daily life. The use of Greek pillars and marble adds a touch of elegance and sophistication, while the abstract shapes create a sense of wonder and mystery.',
@@ -94,8 +99,10 @@ const metadata = [
     image_url:
       'https://arweave.net/DWXphRfwOb5u4Nx2o9SZN6EmBVHasPaafyBHwO7iptQ',
   },
+
   {
     name: 'Ethereal Realm III',
+    listing_id: 1768,
     created_by: 'MXJXN',
     description:
       '"Ethereal Realms" is a collection of AI art that transports the viewer to a realm of tranquility and serenity. These gates are like a peaceful oasis in the midst of a chaotic world, offering a brief escape from the stresses of daily life. The use of Greek pillars and marble adds a touch of elegance and sophistication, while the abstract shapes create a sense of wonder and mystery.',
@@ -121,8 +128,10 @@ const metadata = [
     image_url:
       'https://arweave.net/FITHvAT_UC4M5Z-jxuB6zsKo9Z_NPg1RLPBMj3m68kU',
   },
+
   {
     name: 'Ethereal Realm IV',
+    listing_id: 1770,
     created_by: 'MXJXN',
     description:
       '"Ethereal Realms" is a collection of AI art that transports the viewer to a realm of tranquility and serenity. These gates are like a peaceful oasis in the midst of a chaotic world, offering a brief escape from the stresses of daily life. The use of Greek pillars and marble adds a touch of elegance and sophistication, while the abstract shapes create a sense of wonder and mystery.',
@@ -148,8 +157,10 @@ const metadata = [
     image_url:
       'https://arweave.net/ED0r1gsHvL3ZUlC6zpS24-omlm7iEJhm1VUECD0Uqxk',
   },
+
   {
     name: 'Ethereal Realm V',
+    listing_id: 1771,
     created_by: 'MXJXN',
     description:
       '"Ethereal Realms" is a collection of AIart that transports the viewer to a realm of tranquility and serenity. These gates are like a peaceful oasis in the midst of a chaotic world, offering a brief escape from the stresses of daily life. The use of Greek pillars and marble adds a touch of elegance and sophistication, while the abstract shapes create a sense of wonder and mystery.',
@@ -175,8 +186,10 @@ const metadata = [
     image_url:
       'https://arweave.net/JPm4g4oHxx4NLI_Ldic9z1mVBM2qgABVKcm7LPvUDzk',
   },
+
   {
     name: 'Ethereal Realm VI',
+    listing_id: 1772,
     created_by: 'MXJXN',
     description:
       '"Ethereal Realms" is a collection of AI art that transports the viewer to a realm of tranquility and serenity. These gates are like a peaceful oasis in the midst of a chaotic world, offering a brief escape from the stresses of daily life. The use of Greek pillars and marble adds a touch of elegance and sophistication, while the abstract shapes create a sense of wonder and mystery.',
@@ -202,8 +215,10 @@ const metadata = [
     image_url:
       'https://arweave.net/06-4WgvDUDg6SI7Ad-8URI_ppK1PLoyzVR01mMThVTw',
   },
+
   {
     name: 'Ethereal Realm VII',
+    listing_id: 2213,
     created_by: 'MXJXN',
     description:
       '"Ethereal Realms" is a collection of AI art that transports the viewer to a realm of tranquility and serenity. These gates are like a peaceful oasis in the midst of a chaotic world, offering a brief escape from the stresses of daily life. The use of Greek pillars and marble adds a touch of elegance and sophistication, while the abstract shapes create a sense of wonder and mystery.',
@@ -229,8 +244,10 @@ const metadata = [
     image_url:
       'https://arweave.net/tSbhVytB2Kk8F_-IYHukgYETsa2GIlgeuYtlviDzHZ4',
   },
+
   {
     name: 'Ethereal Realm VIII',
+    listing_id: 2278,
     created_by: 'MXJXN',
     description:
       '"Ethereal Realms" is a collection of AI art that transports the viewer to a realm of tranquility and serenity. These gates are like a peaceful oasis in the midst of a chaotic world, offering a brief escape from the stresses of daily life. The use of Greek pillars and marble adds a touch of elegance and sophistication, while the abstract shapes create a sense of wonder and mystery.',
@@ -256,8 +273,10 @@ const metadata = [
     image_url:
       'https://arweave.net/CiHpurXpzlzEkBaJFrDFwWa63gQeeQPIwqoK3oaeDmk',
   },
+
   {
     name: 'Ethereal Realms IX',
+    listing_id: 2279,
     created_by: 'MXJXN',
     description:
       '"Ethereal Realms" is a collection of AI art that transports the viewer to a realm of tranquility and serenity. These gates are like a peaceful oasis in the midst of a chaotic world, offering a brief escape from the stresses of daily life. The use of Greek pillars and marble adds a touch of elegance and sophistication, while the abstract shapes create a sense of wonder and mystery.',
@@ -283,8 +302,10 @@ const metadata = [
     image_url:
       'https://arweave.net/lJVJyakBge1UbmQcdgK09kSuqsntU39O63oIEHwtR4A',
   },
+
   {
     name: 'Ethereal Realm X',
+    listing_id: 2439,
     created_by: 'MXJXN',
     description:
       '"Ethereal Realms" is a collection of AI art that transports the viewer to a realm of tranquility and serenity. These gates are like a peaceful oasis in the midst of a chaotic world, offering a brief escape from the stresses of daily life. The use of Greek pillars and marble adds a touch of elegance and sophistication, while the abstract shapes create a sense of wonder and mystery.',
@@ -310,8 +331,10 @@ const metadata = [
     image_url:
       'https://arweave.net/mCk5qND9XS82RVDwGQBhFsjiGEAaGScA5PTMBLt16os',
   },
+
   {
     name: 'Ethereal Realm XI',
+    listing_id: 2877,
     created_by: 'MXJXN',
     description:
       '"Ethereal Realms" is a collection of AI art that transports the viewer to a realm of tranquility and serenity. These gates are like a peaceful oasis in the midst of a chaotic world, offering a brief escape from the stresses of daily life. The use of Greek pillars and marble adds a touch of elegance and sophistication, while the abstract shapes create a sense of wonder and mystery.',
@@ -337,8 +360,10 @@ const metadata = [
     image_url:
       'https://arweave.net/r6qjVpfzOjyK_mpZGmYOSPR-2LNyeCp8oQGwN6ooREc',
   },
+
   {
     name: 'Ethereal Realm XII',
+    listing_id: 2878,
     created_by: 'MXJXN',
     description:
       '"Ethereal Realms" is a collection of AI art that transports the viewer to a realm of tranquility and serenity. These gates are like a peaceful oasis in the midst of a chaotic world, offering a brief escape from the stresses of daily life. The use of Greek pillars and marble adds a touch of elegance and sophistication, while the abstract shapes create a sense of wonder and mystery.',
@@ -364,8 +389,10 @@ const metadata = [
     image_url:
       'https://arweave.net/BkW8X0WuL8fiIlw6BRbjT2t-4Qy861zR_GrBwCcN4QA',
   },
+
   {
     name: 'Ethereal Realm XIII',
+    listing_id: 2879,
     created_by: 'MXJXN',
     description:
       '"Ethereal Realms" is a collection of AI art that transports the viewer to a realm of tranquility and serenity. These gates are like a peaceful oasis in the midst of a chaotic world, offering a brief escape from the stresses of daily life. The use of Greek pillars and marble adds a touch of elegance and sophistication, while the abstract shapes create a sense of wonder and mystery.',
@@ -391,8 +418,10 @@ const metadata = [
     image_url:
       'https://arweave.net/C1s_iiwmjPP4hG3I1m4yWsltVSljE60YcAd-XpShUiY',
   },
+
   {
     name: 'Ethereal Realm XIV',
+    listing_id: 2880,
     created_by: 'MXJXN',
     description:
       '"Ethereal Realms" is a collection of AI art that transports the viewer to a realm of tranquility and serenity. These gates are like a peaceful oasis in the midst of a chaotic world, offering a brief escape from the stresses of daily life. The use of Greek pillars and marble adds a touch of elegance and sophistication, while the abstract shapes create a sense of wonder and mystery.',
@@ -418,8 +447,10 @@ const metadata = [
     image_url:
       'https://arweave.net/DF3g_5LoLakHQIANxYc8VdPtJv6a8VhLybv0zk1JoO4',
   },
+
   {
     name: 'Ethereal Realm XV',
+    listing_id: 2881,
     created_by: 'MXJXN',
     description:
       '"Ethereal Realms" is a collection of AI art that transports the viewer to a realm of tranquility and serenity. These gates are like a peaceful oasis in the midst of a chaotic world, offering a brief escape from the stresses of daily life. The use of Greek pillars and marble adds a touch of elegance and sophistication, while the abstract shapes create a sense of wonder and mystery.',
@@ -445,8 +476,10 @@ const metadata = [
     image_url:
       'https://arweave.net/bcrp5DWe3msFIyS724bxq_LXK5YwKJRbnK5OhEs3Kr8',
   },
+
   {
     name: 'Ethereal Realm XVI',
+    listing_id: 2882,
     created_by: 'MXJXN',
     description:
       '"Ethereal Realms" is a collection of AI art that transports the viewer to a realm of tranquility and serenity. These gates are like a peaceful oasis in the midst of a chaotic world, offering a brief escape from the stresses of daily life. The use of Greek pillars and marble adds a touch of elegance and sophistication, while the abstract shapes create a sense of wonder and mystery.',
@@ -472,8 +505,10 @@ const metadata = [
     image_url:
       'https://arweave.net/-E2DIgoVArv6I-HKxS7B-CYI1EEIti3zR8uxXu9Qnhs',
   },
+
   {
     name: 'Ethereal Realm XVII',
+    listing_id: 2883,
     created_by: 'MXJXN',
     description:
       '"Ethereal Realms" is a collection of AI art that transports the viewer to a realm of tranquility and serenity. These gates are like a peaceful oasis in the midst of a chaotic world, offering a brief escape from the stresses of daily life. The use of Greek pillars and marble adds a touch of elegance and sophistication, while the abstract shapes create a sense of wonder and mystery.',
@@ -544,6 +579,7 @@ export type NFTMetadata = {
   image_details: ImageDetails
   image: string
   image_url: string
+  listing_id?: number
 }
 
 const MXJXNArtworksMetadata: NFTMetadata[] = _.map(metadata, (item, index) => ({

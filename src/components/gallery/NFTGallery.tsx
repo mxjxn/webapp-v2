@@ -105,9 +105,13 @@ export default function NFTGallery(props: NFTGalleryProps) {
 }
 
 const NFTGridItem = ({ nft }: React.PropsWithChildren<any>) => {
+  const nftSrc = localNftSrc(nft)
   return (
     <GridItem m={'.3em'} bg={'blue'}>
-      <Image src={`images/${nft.image}`} />
+      <Image src={nftSrc} />
     </GridItem>
   )
 }
+
+const localNftSrc = (nft: NFTMetadata): string =>
+  `/images/nftImages/${nft.tokenId}.png`

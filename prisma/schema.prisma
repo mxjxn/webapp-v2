@@ -1,55 +1,66 @@
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["jsonProtocol"]
 }
 
 datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
-  relationMode = "prisma"
+  provider          = "postgresql"
+  url               = env("POSTGRES_PRISMA_URL") // uses connection pooling
+  directUrl         = env("POSTGRES_URL_NON_POOLING") // uses a direct connection
+  shadowDatabaseUrl = env("POSTGRES_URL_NON_POOLING") // used for migrations
 }
 
 model User {
-  wallet    String   @id @unique @default(cuid())
-  email     String?  @unique
-  nfts      NFT[]
+  wallet String  @id @unique @default(cuid())
+  email  String? @unique
+  nfts   NFT[]
 }
- 
+
 model NFT {
   contractAddress String
-	tokenURI				String
-  tokenId         Int @unique
+  tokenURI        String
+  tokenId         Int        @unique
   collection      Collection @relation(fields: [contractAddress], references: [contractAddress])
-  owner           User? @relation(fields: [ownerId], references: [wallet])
+  owner           User?      @relation(fields: [ownerId], references: [wallet])
   ownerId         String?
   image           String?
   animationURI    String?
   attributes      Json?
-  @@id ([contractAddress, tokenId])
+  Listing         Listing[]
+
+  @@id([contractAddress, tokenId])
+}
+
+model Listing {
+  listingId       Int    @unique
+  nft             NFT    @relation(fields: [contractAddress, tokenId], references: [contractAddress, tokenId])
+  contractAddress String
+  tokenId         Int
 }
 
 model Admin {
-  id              Int      @id @default(autoincrement())
-  contractAddress String   @unique
+  id              Int    @id @default(autoincrement())
+  contractAddress String @unique
 }
 
 model Collection {
-  contractAddress String @id @unique
+  contractAddress String  @id @unique
   name            String
   coverImage      String?
   nfts            NFT[]
 }
 
 model BlogPost {
-  id          Int      @id @default(autoincrement())
+  id          Int           @id @default(autoincrement())
   title       String
-  slug        String   @unique
+  slug        String        @unique
   postType    PostType
   content     String
   videoUrl    String?
   audioUrl    String?
   description String?
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
+  createdAt   DateTime      @default(now())
+  updatedAt   DateTime      @updatedAt
   tags        BlogPostTag[] // Update the relation
 }
 
@@ -63,9 +74,9 @@ enum PostType {
 }
 
 model Tag {
-  id        Int       @id @default(autoincrement())
-  name      String    @unique
-  slug      String    @unique
+  id        Int           @id @default(autoincrement())
+  name      String        @unique
+  slug      String        @unique
   blogPosts BlogPostTag[] // Update the relation
 }
 
@@ -75,5 +86,6 @@ model BlogPostTag {
   tagId      Int
   blogPost   BlogPost @relation(fields: [blogPostId], references: [id])
   tag        Tag      @relation(fields: [tagId], references: [id])
+
   @@id([blogPostId, tagId])
 }

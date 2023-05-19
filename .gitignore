@@ -36,6 +36,9 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+# editor(s)
+/.vscode
+
 # hardhat
 contracts/node_modules
 contracts/.env

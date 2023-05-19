@@ -15,6 +15,9 @@ async function getCleanFarcasterPosts() {
     fetch(uri, config as RequestInit).then((res) => res.json())
 
   const data = await fetcher(farcasterPostsUri)
+  console.log({
+    farcasterData: data,
+  })
   const originalPosts = _.filter(
     _.get(data, 'result.casts'),
     (item) => item.recast !== true && _.isUndefined(item.parentHash)

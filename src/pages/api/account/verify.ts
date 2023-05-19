@@ -27,7 +27,6 @@ export default withSessionRoute(async function handler(
         create: { wallet: fields.address },
       })
       console.log('login success!')
-      console.log({ user })
       req.session.siwe = fields
       req.session.userId = user.wallet
       await req.session.save()

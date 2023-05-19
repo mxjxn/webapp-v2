@@ -14,16 +14,14 @@ import { getCleanFarcasterPosts } from 'lib/getCleanFarcasterPosts'
 
 import { josefin } from 'utils/loadFonts'
 import FarcasterPosts, { FarcasterPost } from 'components/FarcasterPosts'
+import { getNFTData } from './api/nftData'
+import seedDatabase from './api/seedDatabase'
 
 interface HomeProps {
 	nfts: NFTMetadata[]
 	posts: FarcasterPost[]
 }
 export default function Home({ nfts, posts }: HomeProps) {
-  console.log({
-    nfts,
-    posts,
-  })
   return (
     <>
       <Head />
@@ -76,13 +74,14 @@ export default function Home({ nfts, posts }: HomeProps) {
 
 export async function getStaticProps() {
   const cleanPosts = await getCleanFarcasterPosts()
-  const nfts = artworks
+  // const nfts = artworks
+	const nfts = await getNFTData()
 
   return {
     props: {
       nfts,
       posts: cleanPosts,
     },
-    revalidate: 120,
+    revalidate: 3600,
   }
 }

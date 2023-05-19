@@ -20,7 +20,7 @@ export const THEME_CONFIG = {
 }
 
 export const SOCIAL_TWITTER = 'mxjxn'
-export const SOCIAL_GITHUB = 'mxjxn/mxjxnxyz-v2'
+export const SOCIAL_GITHUB = 'mxjxn/webapp-v2'
 
 export const ETH_CHAINS = [mainnet, sepolia, polygon, optimism, arbitrum]
 
